@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;	
 
 public class MainView extends NXCBaseView{
-	
 	private By ocrPage            = By.xpath("//a[text()='OCR Page']");
 	private By termsAndConditions = By.xpath("//a[text()='View Terms "
 									+ "and conditions']");
