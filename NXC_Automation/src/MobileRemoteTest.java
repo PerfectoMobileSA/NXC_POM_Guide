@@ -54,12 +54,16 @@ public class MobileRemoteTest {
 		catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// Close the browser
-			driver.close();
+			try{
+				// Close the browser
+				driver.close();
 			
-			// Download a pdf version of the execution report
-			downloadReport(driver, "pdf", "C:\\temp\\report.pdf");
-			
+				// Download a pdf version of the execution report
+				downloadReport(driver, "pdf", "C:\\temp\\report.pdf");
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
 			// Release the driver
 			driver.quit();
 		}
